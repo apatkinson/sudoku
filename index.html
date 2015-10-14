@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="andrew">
+<head>
+    <meta charset="UTF-8">
+    <title>andrew</title>
+    <script src="data.js"></script>
+    <script src="Game.js"></script>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container" ng-controller="gridController as grid">
+    <div class="grid" ng-repeat="(gridKey, grid) in dataVar">
+        <!--{{gridKey}}-->
+        <div class="num-container" ng-repeat="(numKey, num) in grid">
+            <!--@todo need to use individual controllers not a bodge -->
+            <input class="number" ng-model="dataVar[gridKey][numKey]" type="number" max="9" min="1">
+            <!--{{num}}-->
+            <br>
+        </div>
+    </div>
+    <hr style="clear:both;">
+    <!--<input class="number" ng-model="dataVar['1']['1']">-->
+    {{dataVar}}
+</div>
+
+
+
+</body>
+</html>

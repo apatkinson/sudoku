@@ -1,0 +1,14 @@
+.container{
+    width:550px;
+}
+.grid{
+    float:left;
+    border: 1px solid black;
+    width:140px;
+}
+.num-container{
+    float:left;
+}
+.number{
+    width:30px;
+}
